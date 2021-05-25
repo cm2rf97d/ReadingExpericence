@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00F03C6CE33DD19B5795789BF8CD3367 /* LGSideMenuController+ValidatingViewsStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5C64257E9C41C24A6F6DE5924EE70 /* LGSideMenuController+ValidatingViewsStyles.swift */; };
+		015B67F152D743E567C034076A6B0A0F /* LGSideMenuController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83CF230D87FFF848750B78EF9FC87F30 /* LGSideMenuController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		036BDB39A558D788EF6E96D1C4634BF6 /* LGSideMenuController+ValidatingViewsHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A62E132B206A7149F83607B0DE7682 /* LGSideMenuController+ValidatingViewsHierarchy.swift */; };
+		0493ABDBC1DDABB9C0AE43217241FDED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE09B24E9EBBCE4A19480F7596D32DB0 /* CoreGraphics.framework */; };
+		0579FB43A4857BBADC752D80EDF54195 /* LGSideMenuController+Rotating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9F28221A9399EF3F4BC75F13C43DE /* LGSideMenuController+Rotating.swift */; };
+		0C8D7873972451F795BB2D4EF9AA14C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92BE98A3FECD223AC2BC418D1F6D1E /* Foundation.framework */; };
+		0CB2A3D431532DA9645992486F8B5555 /* LGSideMenuController+ValidatingViewsTransforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA76F2B1E57233497CC979D440DB10E /* LGSideMenuController+ValidatingViewsTransforms.swift */; };
+		166655B5A14DA42840DD94A5ADE3F2AF /* LGSideMenuController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F80E579667B71A72D518BACCF6878791 /* LGSideMenuController-dummy.m */; };
+		2AD1334874C29C464111C5EA6EF39468 /* LGSideMenuController+ValidatingUserInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F156D076143F0338C5396F48BE055A /* LGSideMenuController+ValidatingUserInteraction.swift */; };
+		3937820FBC7E5B929C447DDE3EC65F6D /* LGSideMenuBackgroundDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27CB08C4FB1CC9061EE9798F294D9FB /* LGSideMenuBackgroundDecorationView.swift */; };
+		3C3A5F3C576C61D65F7CF8ACB253B4F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD98ACC7A6E40DDB620663F2EDAAF78E /* UIKit.framework */; };
+		42462C1B8E8A65717E0D0FA4CA7510E3 /* Pods-ReadingExperience-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B82AAB2DC5276F4E83715A79F774D082 /* Pods-ReadingExperience-dummy.m */; };
+		43702ADAA238228CEFA4E1D77F1CF360 /* UIViewController+LGSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF25A1FA37DDD4751E7362F5D613DDAB /* UIViewController+LGSideMenuController.swift */; };
+		44C68263BFDDA1128B256A43119DCB7E /* LGSideMenuController+ValidatingViewsFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B9AA3BF0D2B4A26E9997800BDD94E /* LGSideMenuController+ValidatingViewsFrames.swift */; };
+		5373761887F27DA4FB8FF6249A469065 /* LGSideMenuController+ViewsRemoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBDF28CAA0F5F65BA408457563743A3 /* LGSideMenuController+ViewsRemoving.swift */; };
+		5B140FE872D2763220D6EA6DA9B42430 /* LGSideMenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3492FFD00B708D9EFB769239960529C6 /* LGSideMenuHelper.swift */; };
+		5DE020350E1A86FE2973C0CB9A82B437 /* LGSideMenuController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252993D4A369245EEC7560D26AB72D9 /* LGSideMenuController+Helpers.swift */; };
+		62B056A9DD70AAEBFBE55AB72923F8BB /* LGSideMenuController+States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D97535B0FBB1BE86314A391D4EE62E /* LGSideMenuController+States.swift */; };
+		680F135FC4E0C047299D881B98FB3763 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C09193A052927B31C8B55270AC578DC /* QuartzCore.framework */; };
+		7E4741D8DD3BC75D2BC179CD8C8A9C50 /* LGSideMenuStatusBarBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415806D858B0EBBDC261F83F11ED1BE /* LGSideMenuStatusBarBackgroundView.swift */; };
+		8D1FFBC66B42B25A77AA8060083F483A /* LGSideMenuSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402601719FB81523B7F23B03E1D394C0 /* LGSideMenuSegue.swift */; };
+		9507AA98B3C9ACB28E1CE92EF6E1C1E8 /* LGSideMenuController+Callbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75203144845011E86DE54C45CEF77D28 /* LGSideMenuController+Callbacks.swift */; };
+		97C348BCC4C44C65600A2727C5D395D3 /* LGSideMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4FBEFF06E2E4B90B781AD77332DCDD /* LGSideMenuDelegate.swift */; };
+		A467B9AB06067CB2D8541F2D1630AEA4 /* LGSideMenuController+Layouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95102C3AB05BD4B4E561DDCBE02AAED /* LGSideMenuController+Layouting.swift */; };
+		AC0891EEDCE9DAF3AF98DA868FE12BE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92BE98A3FECD223AC2BC418D1F6D1E /* Foundation.framework */; };
+		AD0CAD1A46D044968B9F733F22F1DE8D /* LGSideMenuBackgroundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B7436FD8EF2C5AB9FEFEC755F8743 /* LGSideMenuBackgroundShadowView.swift */; };
+		B04F458B0DD12433CFDE4935806DC1D7 /* Pods-ReadingExperience-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67F4C9D4826A0651D6D9AD91F8817628 /* Pods-ReadingExperience-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B336CC357E2592A8C04E33F3D2ED5A96 /* LGSideMenuController+StatusBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E311A367AAC25AB475A19CCA0B62E4EE /* LGSideMenuController+StatusBarHandler.swift */; };
+		C54624CA4487B5F9B14939E041F166BC /* LGSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EAC21656951A1068D5D0BC7E70F290 /* LGSideMenuController.swift */; };
+		C83C0F40A16D01CC35B65D646F141471 /* LGSideMenuController+RightViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB063D9AC4838B74DC8A4830ED68A4E3 /* LGSideMenuController+RightViewActions.swift */; };
+		CF3B11A0608D835C6B8A690CE064A09F /* LGSideMenuController+LeftViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53CA9791846DE895106B5E2464CC8DF /* LGSideMenuController+LeftViewActions.swift */; };
+		D72B1A22784069A6B414B1A24104E37E /* LGSideMenuController+ValidatingViewsVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C0DBEE8F5D9B3B674CC544B9C693A /* LGSideMenuController+ValidatingViewsVisibility.swift */; };
+		D9023107F1C3A2F12F28FD7EC852F99F /* LGSideMenuController+GesturesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F535744E6FFC0000330683E1D3B82A /* LGSideMenuController+GesturesHandler.swift */; };
+		E62C633A5752EF8B1F229D46E61E9B8B /* LGSideMenuWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BFFE7CAF7DB0F00F712204F6F2C4C5 /* LGSideMenuWrapperView.swift */; };
+		F5CFC3947267555283423396D94291F8 /* LGSideMenuController+ValidatingViewsInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68087483D9AC0CD21F07EDE382D027D /* LGSideMenuController+ValidatingViewsInit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEE500579D069B10377FCC7FB4E24D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E1EC8CEFCB04F48D36C12CD11425CAC;
+			remoteInfo = LGSideMenuController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01BFFE7CAF7DB0F00F712204F6F2C4C5 /* LGSideMenuWrapperView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGSideMenuWrapperView.swift; path = LGSideMenuController/LGSideMenuWrapperView.swift; sourceTree = "<group>"; };
+		0C292D9E097F24819456E5E898B31EB0 /* LGSideMenuController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LGSideMenuController-Info.plist"; sourceTree = "<group>"; };
+		12F9F28221A9399EF3F4BC75F13C43DE /* LGSideMenuController+Rotating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+Rotating.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+Rotating.swift"; sourceTree = "<group>"; };
+		14F535744E6FFC0000330683E1D3B82A /* LGSideMenuController+GesturesHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+GesturesHandler.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+GesturesHandler.swift"; sourceTree = "<group>"; };
+		16F156D076143F0338C5396F48BE055A /* LGSideMenuController+ValidatingUserInteraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+ValidatingUserInteraction.swift"; path = "LGSideMenuController/Extensions/Validators/LGSideMenuController+ValidatingUserInteraction.swift"; sourceTree = "<group>"; };
+		1A30172AE9F0660847BC807A6F15A494 /* LGSideMenuController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LGSideMenuController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E92357856497141141EDD530182DC3A /* Pods-ReadingExperience-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReadingExperience-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3492FFD00B708D9EFB769239960529C6 /* LGSideMenuHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGSideMenuHelper.swift; path = LGSideMenuController/LGSideMenuHelper.swift; sourceTree = "<group>"; };
+		3FE5C64257E9C41C24A6F6DE5924EE70 /* LGSideMenuController+ValidatingViewsStyles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+ValidatingViewsStyles.swift"; path = "LGSideMenuController/Extensions/Validators/LGSideMenuController+ValidatingViewsStyles.swift"; sourceTree = "<group>"; };
+		402601719FB81523B7F23B03E1D394C0 /* LGSideMenuSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGSideMenuSegue.swift; path = LGSideMenuController/LGSideMenuSegue.swift; sourceTree = "<group>"; };
+		4F41C1968978D1AA602F1EE35EB35DFF /* LGSideMenuController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LGSideMenuController.release.xcconfig; sourceTree = "<group>"; };
+		51D97535B0FBB1BE86314A391D4EE62E /* LGSideMenuController+States.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+States.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+States.swift"; sourceTree = "<group>"; };
+		564789C7AF704718C9300148DE372E99 /* LGSideMenuController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LGSideMenuController.modulemap; sourceTree = "<group>"; };
+		5E472C2EC0966AC34BE4A998BA7FB0F5 /* Pods-ReadingExperience-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReadingExperience-acknowledgements.plist"; sourceTree = "<group>"; };
+		61A62E132B206A7149F83607B0DE7682 /* LGSideMenuController+ValidatingViewsHierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+ValidatingViewsHierarchy.swift"; path = "LGSideMenuController/Extensions/Validators/LGSideMenuController+ValidatingViewsHierarchy.swift"; sourceTree = "<group>"; };
+		659C0DBEE8F5D9B3B674CC544B9C693A /* LGSideMenuController+ValidatingViewsVisibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+ValidatingViewsVisibility.swift"; path = "LGSideMenuController/Extensions/Validators/LGSideMenuController+ValidatingViewsVisibility.swift"; sourceTree = "<group>"; };
+		67F4C9D4826A0651D6D9AD91F8817628 /* Pods-ReadingExperience-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ReadingExperience-umbrella.h"; sourceTree = "<group>"; };
+		6DA76F2B1E57233497CC979D440DB10E /* LGSideMenuController+ValidatingViewsTransforms.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+ValidatingViewsTransforms.swift"; path = "LGSideMenuController/Extensions/Validators/LGSideMenuController+ValidatingViewsTransforms.swift"; sourceTree = "<group>"; };
+		75203144845011E86DE54C45CEF77D28 /* LGSideMenuController+Callbacks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+Callbacks.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+Callbacks.swift"; sourceTree = "<group>"; };
+		7B8594B628C11029239B5637870F36CA /* Pods-ReadingExperience-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReadingExperience-frameworks.sh"; sourceTree = "<group>"; };
+		7B92BE98A3FECD223AC2BC418D1F6D1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8218C32F87484A0DE15C6C343C228645 /* Pods-ReadingExperience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReadingExperience.debug.xcconfig"; sourceTree = "<group>"; };
+		83CF230D87FFF848750B78EF9FC87F30 /* LGSideMenuController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGSideMenuController-umbrella.h"; sourceTree = "<group>"; };
+		928F138B8C7AC25EBC0676921344F1A6 /* Pods-ReadingExperience.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ReadingExperience.modulemap"; sourceTree = "<group>"; };
+		9344E8F94F13519431E7FA12A6EB3BB8 /* Pods_ReadingExperience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReadingExperience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C09193A052927B31C8B55270AC578DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3C00CBEC8642B58C49FFD78F547403C /* Pods-ReadingExperience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReadingExperience.release.xcconfig"; sourceTree = "<group>"; };
+		A53CA9791846DE895106B5E2464CC8DF /* LGSideMenuController+LeftViewActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+LeftViewActions.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+LeftViewActions.swift"; sourceTree = "<group>"; };
+		AD4FBEFF06E2E4B90B781AD77332DCDD /* LGSideMenuDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGSideMenuDelegate.swift; path = LGSideMenuController/LGSideMenuDelegate.swift; sourceTree = "<group>"; };
+		B252993D4A369245EEC7560D26AB72D9 /* LGSideMenuController+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+Helpers.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+Helpers.swift"; sourceTree = "<group>"; };
+		B27CB08C4FB1CC9061EE9798F294D9FB /* LGSideMenuBackgroundDecorationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGSideMenuBackgroundDecorationView.swift; path = LGSideMenuController/LGSideMenuBackgroundDecorationView.swift; sourceTree = "<group>"; };
+		B68087483D9AC0CD21F07EDE382D027D /* LGSideMenuController+ValidatingViewsInit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+ValidatingViewsInit.swift"; path = "LGSideMenuController/Extensions/Validators/LGSideMenuController+ValidatingViewsInit.swift"; sourceTree = "<group>"; };
+		B82AAB2DC5276F4E83715A79F774D082 /* Pods-ReadingExperience-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReadingExperience-dummy.m"; sourceTree = "<group>"; };
+		B98F299497A2C378B8930C43A82F25F4 /* LGSideMenuController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGSideMenuController-prefix.pch"; sourceTree = "<group>"; };
+		BEBDF28CAA0F5F65BA408457563743A3 /* LGSideMenuController+ViewsRemoving.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+ViewsRemoving.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+ViewsRemoving.swift"; sourceTree = "<group>"; };
+		C41B9AA3BF0D2B4A26E9997800BDD94E /* LGSideMenuController+ValidatingViewsFrames.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+ValidatingViewsFrames.swift"; path = "LGSideMenuController/Extensions/Validators/LGSideMenuController+ValidatingViewsFrames.swift"; sourceTree = "<group>"; };
+		C49B7436FD8EF2C5AB9FEFEC755F8743 /* LGSideMenuBackgroundShadowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGSideMenuBackgroundShadowView.swift; path = LGSideMenuController/LGSideMenuBackgroundShadowView.swift; sourceTree = "<group>"; };
+		D415806D858B0EBBDC261F83F11ED1BE /* LGSideMenuStatusBarBackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGSideMenuStatusBarBackgroundView.swift; path = LGSideMenuController/LGSideMenuStatusBarBackgroundView.swift; sourceTree = "<group>"; };
+		D75FC3C8ED017826B4FDEBE552655C3D /* LGSideMenuController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LGSideMenuController.debug.xcconfig; sourceTree = "<group>"; };
+		DB063D9AC4838B74DC8A4830ED68A4E3 /* LGSideMenuController+RightViewActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+RightViewActions.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+RightViewActions.swift"; sourceTree = "<group>"; };
+		DD98ACC7A6E40DDB620663F2EDAAF78E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DF25A1FA37DDD4751E7362F5D613DDAB /* UIViewController+LGSideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+LGSideMenuController.swift"; path = "LGSideMenuController/UIViewController+LGSideMenuController.swift"; sourceTree = "<group>"; };
+		E311A367AAC25AB475A19CCA0B62E4EE /* LGSideMenuController+StatusBarHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+StatusBarHandler.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+StatusBarHandler.swift"; sourceTree = "<group>"; };
+		EE09B24E9EBBCE4A19480F7596D32DB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		F0EAC21656951A1068D5D0BC7E70F290 /* LGSideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGSideMenuController.swift; path = LGSideMenuController/LGSideMenuController.swift; sourceTree = "<group>"; };
+		F80E579667B71A72D518BACCF6878791 /* LGSideMenuController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LGSideMenuController-dummy.m"; sourceTree = "<group>"; };
+		F95102C3AB05BD4B4E561DDCBE02AAED /* LGSideMenuController+Layouting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LGSideMenuController+Layouting.swift"; path = "LGSideMenuController/Extensions/LGSideMenuController+Layouting.swift"; sourceTree = "<group>"; };
+		FFB038A04B6FCC0B3F0CF4D3D73F4817 /* Pods-ReadingExperience-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReadingExperience-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5C82D82E5D2C06EE1397DF9A23069DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0493ABDBC1DDABB9C0AE43217241FDED /* CoreGraphics.framework in Frameworks */,
+				0C8D7873972451F795BB2D4EF9AA14C8 /* Foundation.framework in Frameworks */,
+				680F135FC4E0C047299D881B98FB3763 /* QuartzCore.framework in Frameworks */,
+				3C3A5F3C576C61D65F7CF8ACB253B4F0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09D7E32D1C0A2738752AED0F3CE2152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC0891EEDCE9DAF3AF98DA868FE12BE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25686F0FDDA5A109769CAF48D0C3ED66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B685470C77E8A091522F2A6EFCAA8AE /* LGSideMenuController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5743D36B157C89C81622D17F5F04E631 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5624A5F4372388068B6B34575B3566C /* Pods-ReadingExperience */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8B685470C77E8A091522F2A6EFCAA8AE /* LGSideMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				B27CB08C4FB1CC9061EE9798F294D9FB /* LGSideMenuBackgroundDecorationView.swift */,
+				C49B7436FD8EF2C5AB9FEFEC755F8743 /* LGSideMenuBackgroundShadowView.swift */,
+				F0EAC21656951A1068D5D0BC7E70F290 /* LGSideMenuController.swift */,
+				75203144845011E86DE54C45CEF77D28 /* LGSideMenuController+Callbacks.swift */,
+				14F535744E6FFC0000330683E1D3B82A /* LGSideMenuController+GesturesHandler.swift */,
+				B252993D4A369245EEC7560D26AB72D9 /* LGSideMenuController+Helpers.swift */,
+				F95102C3AB05BD4B4E561DDCBE02AAED /* LGSideMenuController+Layouting.swift */,
+				A53CA9791846DE895106B5E2464CC8DF /* LGSideMenuController+LeftViewActions.swift */,
+				DB063D9AC4838B74DC8A4830ED68A4E3 /* LGSideMenuController+RightViewActions.swift */,
+				12F9F28221A9399EF3F4BC75F13C43DE /* LGSideMenuController+Rotating.swift */,
+				51D97535B0FBB1BE86314A391D4EE62E /* LGSideMenuController+States.swift */,
+				E311A367AAC25AB475A19CCA0B62E4EE /* LGSideMenuController+StatusBarHandler.swift */,
+				16F156D076143F0338C5396F48BE055A /* LGSideMenuController+ValidatingUserInteraction.swift */,
+				C41B9AA3BF0D2B4A26E9997800BDD94E /* LGSideMenuController+ValidatingViewsFrames.swift */,
+				61A62E132B206A7149F83607B0DE7682 /* LGSideMenuController+ValidatingViewsHierarchy.swift */,
+				B68087483D9AC0CD21F07EDE382D027D /* LGSideMenuController+ValidatingViewsInit.swift */,
+				3FE5C64257E9C41C24A6F6DE5924EE70 /* LGSideMenuController+ValidatingViewsStyles.swift */,
+				6DA76F2B1E57233497CC979D440DB10E /* LGSideMenuController+ValidatingViewsTransforms.swift */,
+				659C0DBEE8F5D9B3B674CC544B9C693A /* LGSideMenuController+ValidatingViewsVisibility.swift */,
+				BEBDF28CAA0F5F65BA408457563743A3 /* LGSideMenuController+ViewsRemoving.swift */,
+				AD4FBEFF06E2E4B90B781AD77332DCDD /* LGSideMenuDelegate.swift */,
+				3492FFD00B708D9EFB769239960529C6 /* LGSideMenuHelper.swift */,
+				402601719FB81523B7F23B03E1D394C0 /* LGSideMenuSegue.swift */,
+				D415806D858B0EBBDC261F83F11ED1BE /* LGSideMenuStatusBarBackgroundView.swift */,
+				01BFFE7CAF7DB0F00F712204F6F2C4C5 /* LGSideMenuWrapperView.swift */,
+				DF25A1FA37DDD4751E7362F5D613DDAB /* UIViewController+LGSideMenuController.swift */,
+				E1073165A3B495771114777BF2541490 /* Support Files */,
+			);
+			path = LGSideMenuController;
+			sourceTree = "<group>";
+		};
+		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8E67CDA2898D79EB75F3AFB39904E7C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				25686F0FDDA5A109769CAF48D0C3ED66 /* Pods */,
+				EFD9EAF5E9431231A882353B7A59B6D8 /* Products */,
+				5743D36B157C89C81622D17F5F04E631 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D5624A5F4372388068B6B34575B3566C /* Pods-ReadingExperience */ = {
+			isa = PBXGroup;
+			children = (
+				928F138B8C7AC25EBC0676921344F1A6 /* Pods-ReadingExperience.modulemap */,
+				2E92357856497141141EDD530182DC3A /* Pods-ReadingExperience-acknowledgements.markdown */,
+				5E472C2EC0966AC34BE4A998BA7FB0F5 /* Pods-ReadingExperience-acknowledgements.plist */,
+				B82AAB2DC5276F4E83715A79F774D082 /* Pods-ReadingExperience-dummy.m */,
+				7B8594B628C11029239B5637870F36CA /* Pods-ReadingExperience-frameworks.sh */,
+				FFB038A04B6FCC0B3F0CF4D3D73F4817 /* Pods-ReadingExperience-Info.plist */,
+				67F4C9D4826A0651D6D9AD91F8817628 /* Pods-ReadingExperience-umbrella.h */,
+				8218C32F87484A0DE15C6C343C228645 /* Pods-ReadingExperience.debug.xcconfig */,
+				A3C00CBEC8642B58C49FFD78F547403C /* Pods-ReadingExperience.release.xcconfig */,
+			);
+			name = "Pods-ReadingExperience";
+			path = "Target Support Files/Pods-ReadingExperience";
+			sourceTree = "<group>";
+		};
+		E1073165A3B495771114777BF2541490 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				564789C7AF704718C9300148DE372E99 /* LGSideMenuController.modulemap */,
+				F80E579667B71A72D518BACCF6878791 /* LGSideMenuController-dummy.m */,
+				0C292D9E097F24819456E5E898B31EB0 /* LGSideMenuController-Info.plist */,
+				B98F299497A2C378B8930C43A82F25F4 /* LGSideMenuController-prefix.pch */,
+				83CF230D87FFF848750B78EF9FC87F30 /* LGSideMenuController-umbrella.h */,
+				D75FC3C8ED017826B4FDEBE552655C3D /* LGSideMenuController.debug.xcconfig */,
+				4F41C1968978D1AA602F1EE35EB35DFF /* LGSideMenuController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LGSideMenuController";
+			sourceTree = "<group>";
+		};
+		E8E67CDA2898D79EB75F3AFB39904E7C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EE09B24E9EBBCE4A19480F7596D32DB0 /* CoreGraphics.framework */,
+				7B92BE98A3FECD223AC2BC418D1F6D1E /* Foundation.framework */,
+				9C09193A052927B31C8B55270AC578DC /* QuartzCore.framework */,
+				DD98ACC7A6E40DDB620663F2EDAAF78E /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EFD9EAF5E9431231A882353B7A59B6D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A30172AE9F0660847BC807A6F15A494 /* LGSideMenuController.framework */,
+				9344E8F94F13519431E7FA12A6EB3BB8 /* Pods_ReadingExperience.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7573FEB9ADA5BEC36C6F0E35F7A27851 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				015B67F152D743E567C034076A6B0A0F /* LGSideMenuController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E26A16639074B6A6D1BD764D9174663 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04F458B0DD12433CFDE4935806DC1D7 /* Pods-ReadingExperience-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0E1EC8CEFCB04F48D36C12CD11425CAC /* LGSideMenuController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B856E6EC17FBE8302DC66B35DED2DC98 /* Build configuration list for PBXNativeTarget "LGSideMenuController" */;
+			buildPhases = (
+				7573FEB9ADA5BEC36C6F0E35F7A27851 /* Headers */,
+				8DE03DFB9AE4AAFE89C33B55B9921ED3 /* Sources */,
+				C5C82D82E5D2C06EE1397DF9A23069DA /* Frameworks */,
+				ECC97F547974C3FA953D6580A15755BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LGSideMenuController;
+			productName = LGSideMenuController;
+			productReference = 1A30172AE9F0660847BC807A6F15A494 /* LGSideMenuController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		227CB1400590023D7B33375BF51A7C8D /* Pods-ReadingExperience */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F5E35F80CA05294854E583C4BE99066 /* Build configuration list for PBXNativeTarget "Pods-ReadingExperience" */;
+			buildPhases = (
+				7E26A16639074B6A6D1BD764D9174663 /* Headers */,
+				2CC9B06DD6D8FFBFE6DBC3BCA5300437 /* Sources */,
+				D09D7E32D1C0A2738752AED0F3CE2152 /* Frameworks */,
+				A0D3A4DC5A8D46708935EC21517F277A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				932023ADCBCC6A9680EBD3E7BED51B37 /* PBXTargetDependency */,
+			);
+			name = "Pods-ReadingExperience";
+			productName = "Pods-ReadingExperience";
+			productReference = 9344E8F94F13519431E7FA12A6EB3BB8 /* Pods_ReadingExperience.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1230;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = EFD9EAF5E9431231A882353B7A59B6D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E1EC8CEFCB04F48D36C12CD11425CAC /* LGSideMenuController */,
+				227CB1400590023D7B33375BF51A7C8D /* Pods-ReadingExperience */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0D3A4DC5A8D46708935EC21517F277A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC97F547974C3FA953D6580A15755BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CC9B06DD6D8FFBFE6DBC3BCA5300437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42462C1B8E8A65717E0D0FA4CA7510E3 /* Pods-ReadingExperience-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DE03DFB9AE4AAFE89C33B55B9921ED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3937820FBC7E5B929C447DDE3EC65F6D /* LGSideMenuBackgroundDecorationView.swift in Sources */,
+				AD0CAD1A46D044968B9F733F22F1DE8D /* LGSideMenuBackgroundShadowView.swift in Sources */,
+				9507AA98B3C9ACB28E1CE92EF6E1C1E8 /* LGSideMenuController+Callbacks.swift in Sources */,
+				D9023107F1C3A2F12F28FD7EC852F99F /* LGSideMenuController+GesturesHandler.swift in Sources */,
+				5DE020350E1A86FE2973C0CB9A82B437 /* LGSideMenuController+Helpers.swift in Sources */,
+				A467B9AB06067CB2D8541F2D1630AEA4 /* LGSideMenuController+Layouting.swift in Sources */,
+				CF3B11A0608D835C6B8A690CE064A09F /* LGSideMenuController+LeftViewActions.swift in Sources */,
+				C83C0F40A16D01CC35B65D646F141471 /* LGSideMenuController+RightViewActions.swift in Sources */,
+				0579FB43A4857BBADC752D80EDF54195 /* LGSideMenuController+Rotating.swift in Sources */,
+				62B056A9DD70AAEBFBE55AB72923F8BB /* LGSideMenuController+States.swift in Sources */,
+				B336CC357E2592A8C04E33F3D2ED5A96 /* LGSideMenuController+StatusBarHandler.swift in Sources */,
+				2AD1334874C29C464111C5EA6EF39468 /* LGSideMenuController+ValidatingUserInteraction.swift in Sources */,
+				44C68263BFDDA1128B256A43119DCB7E /* LGSideMenuController+ValidatingViewsFrames.swift in Sources */,
+				036BDB39A558D788EF6E96D1C4634BF6 /* LGSideMenuController+ValidatingViewsHierarchy.swift in Sources */,
+				F5CFC3947267555283423396D94291F8 /* LGSideMenuController+ValidatingViewsInit.swift in Sources */,
+				00F03C6CE33DD19B5795789BF8CD3367 /* LGSideMenuController+ValidatingViewsStyles.swift in Sources */,
+				0CB2A3D431532DA9645992486F8B5555 /* LGSideMenuController+ValidatingViewsTransforms.swift in Sources */,
+				D72B1A22784069A6B414B1A24104E37E /* LGSideMenuController+ValidatingViewsVisibility.swift in Sources */,
+				5373761887F27DA4FB8FF6249A469065 /* LGSideMenuController+ViewsRemoving.swift in Sources */,
+				166655B5A14DA42840DD94A5ADE3F2AF /* LGSideMenuController-dummy.m in Sources */,
+				C54624CA4487B5F9B14939E041F166BC /* LGSideMenuController.swift in Sources */,
+				97C348BCC4C44C65600A2727C5D395D3 /* LGSideMenuDelegate.swift in Sources */,
+				5B140FE872D2763220D6EA6DA9B42430 /* LGSideMenuHelper.swift in Sources */,
+				8D1FFBC66B42B25A77AA8060083F483A /* LGSideMenuSegue.swift in Sources */,
+				7E4741D8DD3BC75D2BC179CD8C8A9C50 /* LGSideMenuStatusBarBackgroundView.swift in Sources */,
+				E62C633A5752EF8B1F229D46E61E9B8B /* LGSideMenuWrapperView.swift in Sources */,
+				43702ADAA238228CEFA4E1D77F1CF360 /* UIViewController+LGSideMenuController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		932023ADCBCC6A9680EBD3E7BED51B37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LGSideMenuController;
+			target = 0E1EC8CEFCB04F48D36C12CD11425CAC /* LGSideMenuController */;
+			targetProxy = CEE500579D069B10377FCC7FB4E24D28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		125C51B0F88E28C868DC90BD45E4E727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		55CA2EFE23A469C407FFE72731275F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75FC3C8ED017826B4FDEBE552655C3D /* LGSideMenuController.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LGSideMenuController/LGSideMenuController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LGSideMenuController/LGSideMenuController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LGSideMenuController/LGSideMenuController.modulemap";
+				PRODUCT_MODULE_NAME = LGSideMenuController;
+				PRODUCT_NAME = LGSideMenuController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92A3E9AC052A7345115439021B218E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		95C3B3845740EFCF211BBD2B47716359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3C00CBEC8642B58C49FFD78F547403C /* Pods-ReadingExperience.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ReadingExperience/Pods-ReadingExperience-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ReadingExperience/Pods-ReadingExperience.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA50F5E0AB9488EF8D3800BD14581A23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8218C32F87484A0DE15C6C343C228645 /* Pods-ReadingExperience.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ReadingExperience/Pods-ReadingExperience-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ReadingExperience/Pods-ReadingExperience.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C81B4B0647C562A5F06D8D25C933CC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F41C1968978D1AA602F1EE35EB35DFF /* LGSideMenuController.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LGSideMenuController/LGSideMenuController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LGSideMenuController/LGSideMenuController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LGSideMenuController/LGSideMenuController.modulemap";
+				PRODUCT_MODULE_NAME = LGSideMenuController;
+				PRODUCT_NAME = LGSideMenuController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				125C51B0F88E28C868DC90BD45E4E727 /* Debug */,
+				92A3E9AC052A7345115439021B218E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F5E35F80CA05294854E583C4BE99066 /* Build configuration list for PBXNativeTarget "Pods-ReadingExperience" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA50F5E0AB9488EF8D3800BD14581A23 /* Debug */,
+				95C3B3845740EFCF211BBD2B47716359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B856E6EC17FBE8302DC66B35DED2DC98 /* Build configuration list for PBXNativeTarget "LGSideMenuController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55CA2EFE23A469C407FFE72731275F57 /* Debug */,
+				C81B4B0647C562A5F06D8D25C933CC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

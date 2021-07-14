@@ -2,7 +2,7 @@
 //  HomePageCollectionViewCell.swift
 //  ReadingExperience
 //
-//  Created by 陳郁勳 on 2021/5/19.
+//  Created by 陳郁勳 on 2021/6/10.
 //
 
 import UIKit
@@ -11,28 +11,34 @@ class HomePageCollectionViewCell: UICollectionViewCell
 {
     static let identifier = "HomePageCollectionViewCell"
     
-    var bookImage: MyImageView =
+    let pageLabel: UILabel =
     {
-        let image = MyImageView()
-        return image
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = .black
+        label.layer.backgroundColor = #colorLiteral(red: 0.6247964501, green: 0.6984365582, blue: 0.5420147181, alpha: 1).cgColor
+        label.layer.cornerRadius = 21
+        label.layer.borderWidth = 1
+        label.layer.borderColor = #colorLiteral(red: 0.4512063265, green: 0.5094847679, blue: 0.3660366833, alpha: 1).cgColor
+        label.layer.shadowOffset = CGSize(width: 5, height: 5)
+        label.layer.shadowOpacity = 0.5
+        label.layer.shadowRadius = 3
+        label.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        return label
     }()
     
-    var bookTitle: UITextView =
+    let displayTheCurrentPageView: UIView =
     {
-        let textView = UITextView()
-        textView.isUserInteractionEnabled = false
-        textView.font = UIFont.systemFont(ofSize: 10)
-        textView.textAlignment = .left
-        textView.textColor = .white
-        textView.backgroundColor = .gray
-        return textView
+        let view = UIView()
+        return view
     }()
     
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        addSubview(bookImage)
-        addSubview(bookTitle)
+        addSubview(pageLabel)
+        addSubview(displayTheCurrentPageView)
         layouts()
     }
     
@@ -43,20 +49,36 @@ class HomePageCollectionViewCell: UICollectionViewCell
     
     func layouts()
     {
-        bookImage.snp.makeConstraints
+        pageLabel.snp.makeConstraints
         { (make) in
-            make.width.equalTo(90)
-            make.height.equalTo(90)
-            make.centerX.equalTo(self)
-            make.top.equalTo(self).offset(10)
+            make.right.equalTo(self).offset(-5)
+            make.left.equalTo(self).offset(5)
+            make.top.equalTo(self)
+            make.bottom.equalTo(self).offset(-10)
         }
         
-        bookTitle.snp.makeConstraints
+        displayTheCurrentPageView.snp.makeConstraints
         { (make) in
-            make.width.equalTo(90)
-            make.height.equalTo(100)
-            make.centerX.equalTo(self)
-            make.top.equalTo(bookImage.snp.bottom)
+            make.top.equalTo(pageLabel.snp.bottom)
+            make.right.left.equalTo(pageLabel)
+            make.bottom.equalTo(self)
+        }
+    }
+    
+    override var isSelected: Bool
+    {
+        didSet
+        {
+            DispatchQueue.main.async
+            {
+                UIView.animate(withDuration: 0.3)
+                {
+                    self.pageLabel.layer.backgroundColor = self.isSelected ? #colorLiteral(red: 0.4512063265, green: 0.5094847679, blue: 0.3660366833, alpha: 1).cgColor : #colorLiteral(red: 0.6247964501, green: 0.6984365582, blue: 0.5420147181, alpha: 1).cgColor
+                    self.pageLabel.textColor = self.isSelected ? .white : .black
+//                    self.displayTheCurrentPageView.backgroundColor = self.isSelected ? UIColor.red : UIColor.clear
+                    self.layoutIfNeeded()
+                }
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ class RegisterEmailViewController: UIViewController
 {
     let registerEmailView = RegisterView()
     var registerInfos: [String] = []
+    let emailPattern = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"
     
     override func viewDidLoad()
     {
@@ -36,15 +37,23 @@ class RegisterEmailViewController: UIViewController
         let vc = PasswordViewController()
         if let Name = registerEmailView.accountInfoTextField.text
         {
-            if Name != ""
+            let matcher = emailRegex(self.emailPattern)
+            if Name != "" && matcher.match(input: Name)
             {
-                registerInfos.append(Name)
+                if registerInfos.count < 2
+                {
+                    registerInfos.append(Name)
+                }
+                else
+                {
+                    registerInfos[1] = Name
+                }
                 vc.registerInfos = registerInfos
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             else
             {
-                print("GG")
+                presentAlert(alertText: "Email格式錯誤", mode: .cancelAlert)
             }
         }
     }

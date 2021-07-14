@@ -1,16 +1,24 @@
 PODS:
+  - Alamofire (5.4.3)
   - LGSideMenuController (3.1.1)
+  - lottie-ios (3.2.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.4)
   - LGSideMenuController
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - LGSideMenuController
+    - lottie-ios
 
 SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   LGSideMenuController: 04c679441ea9a9ba5df6a48a5b43b340a1d5caaa
+  lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
 
-PODFILE CHECKSUM: c660d2ce3ecdbdc56921b0e500b1c9bcfd739b78
+PODFILE CHECKSUM: d0f4db69bc6cd08f78733810430dadb2f80da31a
 
 COCOAPODS: 1.10.1

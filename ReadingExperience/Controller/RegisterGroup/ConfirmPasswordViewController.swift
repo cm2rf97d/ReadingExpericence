@@ -17,6 +17,7 @@ class ConfirmPasswordViewController: UIViewController
     {
         super.viewDidLoad()
         setTitleLabel()
+        confirmPasswordView.accountInfoTextField.isSecureTextEntry = true
         confirmPasswordView.accountInfoTextField.delegate = self
         confirmPasswordView.nextButtonAction = gotoRegionViewController
     }
@@ -42,20 +43,26 @@ class ConfirmPasswordViewController: UIViewController
             {
                 if confirmPassword == Name
                 {
-                    registerInfos.append(Name)
+                    if registerInfos.count < 4
+                    {
+                        registerInfos.append(Name)
+                    }
+                    else
+                    {
+                        registerInfos[3] = Name
+                    }
                     vc.registerInfos = registerInfos
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 else
                 {
-                    print("bai chi")
+                    presentAlert(alertText: "與第一次密碼不符", mode: .cancelAlert)
                 }
             }
             else
             {
-                print("GG")
+                presentAlert(alertText: "欄位不可為空白", mode: .cancelAlert)
             }
         }
     }
-    
 }

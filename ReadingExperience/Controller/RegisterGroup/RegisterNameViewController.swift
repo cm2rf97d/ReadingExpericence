@@ -38,13 +38,20 @@ class RegisterNameViewController: UIViewController
         {
             if Name != ""
             {
-                registerInfos.append(Name)
+                if registerInfos.count < 1
+                {
+                    registerInfos.append(Name)
+                }
+                else
+                {
+                    registerInfos[0] = Name
+                }
                 vc.registerInfos = registerInfos
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             else
             {
-                print("GG")
+                presentAlert(alertText: "名稱欄位不可為空白", mode: .cancelAlert)
             }
         }
     }

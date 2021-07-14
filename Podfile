@@ -7,4 +7,6 @@ target 'ReadingExperience' do
 
   # Pods for ReadingExperience
    pod 'LGSideMenuController'
+   pod 'Alamofire', '~> 5.4'
+   pod 'lottie-ios'
 end

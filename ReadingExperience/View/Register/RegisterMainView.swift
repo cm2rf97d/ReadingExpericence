@@ -48,7 +48,7 @@ class RegisterMainView: UIView
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        self.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        self.backgroundColor = registerColor
         addSubview(titleLabel)
         addSubview(registerButton)
         addSubview(signInButton)
@@ -77,7 +77,7 @@ class RegisterMainView: UIView
             make.width.equalTo(300)
             make.height.equalTo(30)
             make.centerX.equalTo(self)
-            make.top.equalTo(300)
+            make.top.equalTo(200)
         }
         
         registerButton.snp.makeConstraints

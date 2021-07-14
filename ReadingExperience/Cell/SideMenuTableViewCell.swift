@@ -20,16 +20,36 @@ class SideMenuTableViewCell: UITableViewCell
         return label
     }()
     
+    var backView: UIView =
+    {
+        let uiView = UIView()
+        return uiView
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)
     {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setBackView()
         addSubview(titleLabel)
         layouts()
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool)
+    {
+        super.setHighlighted(highlighted, animated: animated)
+        backView.backgroundColor = highlighted ? UIColor(white: 1.0, alpha: 0.6) : UIColor(white: 0.0, alpha: 0.2)
+        titleLabel.textColor = highlighted ? .black : .white
     }
     
     required init?(coder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setBackView()
+    {
+        self.backgroundColor = UIColor(white: 0.0, alpha: 0.2)
+        self.selectedBackgroundView = backView
     }
     
     func layouts()

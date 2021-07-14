@@ -80,6 +80,7 @@ class RegisterView: UIView
             make.centerX.equalTo(self)
             make.top.equalTo(350)
         }
+        
         nextButton.snp.makeConstraints
         { (make) in
             make.height.equalTo(40)
@@ -87,6 +88,5 @@ class RegisterView: UIView
             make.centerX.equalTo(self)
             make.bottom.equalTo(-200)
         }
-        
     }
 }

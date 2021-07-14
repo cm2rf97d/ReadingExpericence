@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 
 // MARK: - WelcomeElement
-struct BookData: Codable
+struct BookListData: Codable
 {
     let id: Int
     let isbn, bookname, author: String
     let welcomeDescription: String?
-    let category, publisher, publishDate, image: String
+    let category, publisher, publishDate: String
+    let image: String?
     let createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey
@@ -29,7 +30,7 @@ struct BookData: Codable
     }
 }
 
-typealias Welcome = [BookData]
+//typealias Welcome = [BookListData]
 
 class MyImageView: UIImageView
 {
@@ -42,12 +43,10 @@ class MyImageView: UIImageView
 
         if let imaged = MyImageView.cache.object(forKey: self.url as AnyObject) as? UIImage
         {
-            print("Cached Image")
             self.image = imaged
         }
         else
         {
-            print("Send API")
             URLSession.shared.dataTask(with: url)
             {(data, responds, error) in
                 if let error = error

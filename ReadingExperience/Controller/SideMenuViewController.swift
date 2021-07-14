@@ -7,16 +7,19 @@
 
 import UIKit
 
-protocol pushRegisterMainViewDelegate
+protocol pushRelateViewDelegate
 {
     func pushRegisterMainView()
+    func pushProfileView()
+    func popToRootView()
 }
 
 class SideMenuViewController: UIViewController
 {
-    var pushRegisterMainViewDelegate: pushRegisterMainViewDelegate?
+    var pushRegisterMainViewDelegate: pushRelateViewDelegate?
     let sideMenuView = SideMenuView()
-    let sideMenuDetail = ["會員登入"]
+    let sideMenuDetail = ["主頁", "會員登入", "個人頁面"]
+    var userInfomationData: UserData?
     
     override func viewDidLoad()
     {
@@ -28,6 +31,19 @@ class SideMenuViewController: UIViewController
     override func loadView()
     {
         self.view = sideMenuView
+    }
+    
+    
+    func choosePushController()
+    {
+        if userInformation == nil
+        {
+            pushRegisterMainViewDelegate?.pushRegisterMainView()
+        }
+        else
+        {
+            pushRegisterMainViewDelegate?.pushProfileView()
+        }
     }
 }
 
@@ -47,9 +63,24 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if indexPath.row == 0
+        switch indexPath.row
         {
-            pushRegisterMainViewDelegate?.pushRegisterMainView()
+            case 0:
+                pushRegisterMainViewDelegate?.popToRootView()
+            case 1:
+                choosePushController()
+            case 2:
+                choosePushController()
+            default:
+                break
         }
+    }
+}
+
+extension SideMenuViewController: transferDataToSideMenuDelegate
+{
+    func transferDataToSideMenu(data: UserData)
+    {
+        self.userInfomationData = data
     }
 }

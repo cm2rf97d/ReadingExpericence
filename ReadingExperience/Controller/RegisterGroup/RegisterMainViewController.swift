@@ -15,6 +15,7 @@ class RegisterMainViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = .white
         setButtonAction()
     }
     
@@ -38,7 +39,7 @@ class RegisterMainViewController: UIViewController
     
     @objc func signInButtonAction()
     {
-        
+        self.navigationController?.pushViewController(SignInViewController(), animated: true)
     }
 
 }

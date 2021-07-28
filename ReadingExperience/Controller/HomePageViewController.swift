@@ -26,10 +26,9 @@ class HomePageViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        homePageView.searchTextField.delegate = self
-        setCollectionView()
-        setPageViewController()
+        setDelegate()
         setNavigation()
+        setPageViewController()
         startPosition = homePageView.searchTextField.beginningOfDocument
     }
     
@@ -43,24 +42,64 @@ class HomePageViewController: UIViewController
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2609430552, green: 0.2443105876, blue: 0.05599819124, alpha: 1)
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
+    override func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        UIView.animate(withDuration: 0.4, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations:{
-               // HERE
-            self.homePageView.searchTextField.transform = CGAffineTransform.identity.scaledBy(x: 1.5, y: 1.5) // Scale your image
-         }) { (finished) in
-            UIView.animate(withDuration: 0.5, animations: {
-                self.homePageView.searchTextField.transform = CGAffineTransform.identity // undo in 1 seconds
-           })
-        }
+        guard let bookName = textField.text else { return true }
+        goSearchBook(bookName: bookName)
         return true
     }
-
-    func setCollectionView()
+    
+    func goSearchBook(bookName: String)
     {
+        if bookName == ""
+        {
+            self.presentAlert(alertText: "請輸入書名", mode: .cancelAlert)
+        }
+        else
+        {
+            let vc = SearchBookViewController()
+            vc.searchBookName = bookName
+            self.navigationController?.pushViewController(vc, animated: false)
+        }
+    }
+    
+//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
+//    {
+//        UIView.animate(withDuration: 0.4, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations:
+//        {
+//               // HERE
+//            self.homePageView.searchTextField.transform = CGAffineTransform.identity.scaledBy(x: 1.5, y: 1.5) // Scale your image
+//        })
+//        { (finished) in
+//            UIView.animate(withDuration: 0.5, animations:
+//            {
+//                self.homePageView.searchTextField.transform = CGAffineTransform.identity // undo in 1 seconds
+//           })
+//        }
+//        return true
+//    }
+
+    func setDelegate()
+    {
+        homePageView.searchTextField.delegate = self
         homePageView.homeCollectionView.delegate = self
         homePageView.homeCollectionView.dataSource = self
         homePageView.homeCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+    }
+    
+    func setNavigation()
+    {
+        self.navigationItem.titleView = homePageView.testView
+        
+        //Left Button
+        let sideMenuButton = UIBarButtonItem(image: UIImage(systemName: "text.justify"), style: .plain, target: self, action: #selector(callSideMenu))
+        sideMenuButton.tintColor = #colorLiteral(red: 0.9424498677, green: 0.8881112337, blue: 0.9064692855, alpha: 1)
+        self.navigationItem.leftBarButtonItem = sideMenuButton
+        
+//        //Right Button
+        let searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchBook))
+        searchButton.tintColor = #colorLiteral(red: 0.9424498677, green: 0.8881112337, blue: 0.9064692855, alpha: 1)
+        self.navigationItem.rightBarButtonItem = searchButton
     }
     
     func setPageViewController()
@@ -94,21 +133,6 @@ class HomePageViewController: UIViewController
 //            return viewControllers[index]
 //        }
 //    }
-    
-    func setNavigation()
-    {
-        self.navigationItem.titleView = homePageView.testView
-        
-        //Left Button
-        let sideMenuButton = UIBarButtonItem(image: UIImage(systemName: "text.justify"), style: .plain, target: self, action: #selector(callSideMenu))
-        sideMenuButton.tintColor = #colorLiteral(red: 0.9424498677, green: 0.8881112337, blue: 0.9064692855, alpha: 1)
-        self.navigationItem.leftBarButtonItem = sideMenuButton
-        
-        //Right Button
-        let searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchBook))
-        searchButton.tintColor = #colorLiteral(red: 0.9424498677, green: 0.8881112337, blue: 0.9064692855, alpha: 1)
-        self.navigationItem.rightBarButtonItem = searchButton
-    }
 
     @objc func callSideMenu()
     {
@@ -117,7 +141,8 @@ class HomePageViewController: UIViewController
     
     @objc func searchBook()
     {
-        self.navigationController?.pushViewController(SearchBookViewController(), animated: false)
+        guard let bookName = homePageView.searchTextField.text else {return}
+        goSearchBook(bookName: bookName)
     }
 }
 

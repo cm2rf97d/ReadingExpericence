@@ -22,13 +22,14 @@ class BookDetailView: UIView
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = .gray
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        tableView.backgroundColor = .white
         return tableView
     }()
     
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        self.backgroundColor = .clear
+        self.backgroundColor = .white
         addSubview(bookDetailTableView)
         layouts()
     }

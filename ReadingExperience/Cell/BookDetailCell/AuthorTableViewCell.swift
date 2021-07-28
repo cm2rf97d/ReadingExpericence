@@ -14,6 +14,7 @@ class AuthorTableViewCell: UITableViewCell
     let authorLabel: UILabel =
     {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .left
         return label
     }()
@@ -21,6 +22,7 @@ class AuthorTableViewCell: UITableViewCell
     let publisherLabel: UILabel =
     {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .left
         return label
     }()
@@ -28,6 +30,7 @@ class AuthorTableViewCell: UITableViewCell
     let publishDateLabel: UILabel =
     {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .left
         return label
     }()
@@ -35,6 +38,7 @@ class AuthorTableViewCell: UITableViewCell
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)
     {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = .white
         contentView.addSubview(authorLabel)
         contentView.addSubview(publisherLabel)
         contentView.addSubview(publishDateLabel)

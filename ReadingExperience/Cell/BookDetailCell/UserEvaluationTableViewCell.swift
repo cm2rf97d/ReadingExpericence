@@ -33,6 +33,7 @@ class UserEvaluationTableViewCell: UITableViewCell
     var evaluationLabel: UILabel =
     {
         let label = UILabel()
+        label.textColor = .black
         label.textAlignment = .left
         return label
     }()
@@ -51,6 +52,7 @@ class UserEvaluationTableViewCell: UITableViewCell
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)
     {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = .white
         contentView.addSubview(userLabel)
         contentView.addSubview(descriptionLabel)
         contentView.addSubview(evaluationLabel)

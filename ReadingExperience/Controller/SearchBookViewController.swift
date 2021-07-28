@@ -9,6 +9,7 @@ import UIKit
 
 class SearchBookViewController: UIViewController
 {
+    var searchBookName: String?
     let searchBookView = SearchBookView()
     var bookListDatas: [BookListData] = []
     {
@@ -28,6 +29,8 @@ class SearchBookViewController: UIViewController
     override func viewWillAppear(_ animated: Bool)
     {
         navigationController?.navigationBar.barTintColor = registerColor
+        guard let bookName = self.searchBookName else { return }
+        searchBook(bookName: bookName)
     }
     
     override func loadView()
@@ -37,16 +40,19 @@ class SearchBookViewController: UIViewController
     
     override func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        searchBook()
+        if let bookName = textField.text
+        {
+            searchBook(bookName: bookName)
+        }
         return true
     }
     
     func setNavigationBar()
     {
         //Right Button
-        let searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchBook))
-        searchButton.tintColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
-        self.navigationItem.rightBarButtonItem = searchButton
+//        let searchButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchBook))
+//        searchButton.tintColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
+//        self.navigationItem.rightBarButtonItem = searchButton
         
         //Navigation Title View
         self.navigationItem.titleView = searchBookView.searchTextField
@@ -64,12 +70,12 @@ class SearchBookViewController: UIViewController
         sideMenuController?.toggleLeftView()
     }
     
-    @objc func searchBook()
+    @objc func searchBook(bookName: String)
     {
         searchBookView.searchBookTableView.separatorStyle = .singleLine
         
         //MARK: UrlSet
-        guard let bookName = searchBookView.searchTextField.text else { return }
+//        guard let bookName = searchBookView.searchTextField.text else { return }
         let bookUrl = "books/search/\(bookName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) // 有中文，必須重組
         guard let bookUrl = bookUrl else { return }
         

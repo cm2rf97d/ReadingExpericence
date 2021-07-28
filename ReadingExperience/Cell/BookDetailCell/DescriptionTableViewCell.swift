@@ -23,6 +23,7 @@ class DescriptionTableViewCell: UITableViewCell
     var bookDescriptionLabel: UILabel =
     {
         let label = UILabel()
+        label.textColor = .black
         label.numberOfLines = 0
         label.textAlignment = .left
         return label
@@ -31,6 +32,7 @@ class DescriptionTableViewCell: UITableViewCell
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)
     {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = .white
         contentView.addSubview(descriptionLabel)
         contentView.addSubview(bookDescriptionLabel)
         layouts()

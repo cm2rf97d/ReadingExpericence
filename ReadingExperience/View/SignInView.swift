@@ -44,6 +44,7 @@ class SignInView: UIView
         textField.clearButtonMode = .whileEditing
         textField.keyboardType = .emailAddress
         textField.placeholder = " Enter Your Email"
+        textField.textColor = .black
         return textField
     }()
     

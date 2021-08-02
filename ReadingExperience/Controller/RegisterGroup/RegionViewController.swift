@@ -47,141 +47,61 @@ class RegionViewController: UIViewController
     
     func uploadUserInfomation()
     {
-        setRegisterParameter()
-        print(self.registerParameter)
-        userRegister(urlString: registerUrl, parameters: registerParameter, completion:
-        { (data) in
-            self.setLoginParameter()
-            self.uploadLoginInfo(urlString: self.loginUrl, parameters: self.loginParameter)
-            { (data) in
-                
-            }
-        })
+        userRegister()
     }
     
     // MARK: Function Area
-    func setRegisterParameter()
+    func setRegisterParameter() -> [String: String]
     {
-        self.registerParameter = "name=\(registerInfos[0])&email=\(registerInfos[1])&password=\(registerInfos[2])&password_confirmation=\(registerInfos[3])&region=\(registerInfos[4])"
+        let registerParameters =
+        [
+            "name": registerInfos[0],
+            "email": registerInfos[1],
+            "password": registerInfos[2],
+            "password_confirmation": registerInfos[3],
+            "region": registerInfos[4]
+        ]
+        return registerParameters
     }
     
-    func userRegister(urlString: String, parameters: String, completion: @escaping (Data) -> Void) -> Void
+    func userRegister()
     {
-        let url = URL(string: urlString)!
-        var request = URLRequest(url: url)
-        
-        request.httpBody = parameters.data(using: String.Encoding.utf8)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        uploadRegisterInfo(from: request, completion: completion)
-    }
-    
-    private func uploadRegisterInfo(from request: URLRequest, completion: @escaping (Data) -> Void)
-    {
-        let task = URLSession.shared.dataTask(with: request)
-        { (data, response, error) in
-            
-            if error != nil
+        let registerParameters = setRegisterParameter()
+        APICaller.shared.userRegister(url: "register", headersTitle: "Accept", headersContent: "application/json", parameters: registerParameters)
+        { result in
+            switch result
             {
-                print(error as Any)
-            }
-            else if let response = response as? HTTPURLResponse, let data = data
-            {
-                print("dodo")
-                let decoder = JSONDecoder()
-                
-                print("status Codeee = \(response.statusCode)")
-                if response.statusCode == 201
-                {
-                    print("201")
-                    do
-                    {
-                        if let cdata = try decoder.decode(UserData?.self, from: data)
-                        {
-                            DispatchQueue.main.async
-                            {
-                                self.presentAlert(alertText: "註冊成功", mode: .cancelAlertAndPopToRootView)
-                                userInformation = cdata
-                                completion(data)
-                            }
-                        }
-                        else
-                        {
-                            print("1231237")
-                        }
-                    }
-                    catch
-                    {
-                        print(error)
-                    }
-                }
-                else if response.statusCode == 422
-                {
-                    print("42211")
-                    do
-                    {
-                        print("cdata")
-                        if let cdata = try decoder.decode(CommonError?.self, from: data)
-                        {
-                            print("no cdata")
-                            DispatchQueue.main.async
-                            { [weak self] in
-                                print(cdata)
-                                self?.presentAlert(alertText: cdata.errors.email?.first ?? "b", mode: .cancelAlert)
-                            }
-                        }
-                        else
-                        {
-                            print("Register Decoder Error")
-                        }
-                    }
-                    catch
-                    {
-                        print(error)
-                    }
-                }
-                else
-                {
-                    print(response.statusCode)
-                }
+            case .success(let data):
+                self.presentAlert(alertText: "註冊成功", mode: .cancelAlertAndPopToRootView)
+                userInformation = data
+                self.userLogin()
+            case .failure(.emailAlreadyRegister(_)): break
+            case .failure(.emailInvaild(_)): break
             }
         }
-        task.resume()
     }
     
-    func setLoginParameter()
+    func setLoginParameter() -> [String: String]
     {
-        self.loginParameter = "email=\(registerInfos[1])&password=\(registerInfos[2])"
+        let parameters =
+        [
+            "email": registerInfos[1],
+            "password": registerInfos[2]
+        ]
+        return parameters
     }
     
-    func uploadLoginInfo(urlString: String, parameters: String, completion: @escaping (Data) -> Void) -> Void
+    private func userLogin()
     {
-        let url = URL(string: urlString)!
-        var request = URLRequest(url: url)
-        request.httpBody = parameters.data(using: String.Encoding.utf8)
-        request.httpMethod = "POST"
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        userLogin(from: request, completion: completion)
-    }
-    
-    private func userLogin(from request: URLRequest, completion: @escaping (Data) -> Void)
-    {
-        let task = URLSession.shared.dataTask(with: request)
-        { (data, response, error) in
-            
-            if error != nil
+        let loginParameters = setLoginParameter()
+        APICaller.shared.userLogin(url: "login", headersTitle: "Accpet", headersContent: "application/json", parameters: loginParameters)
+        { result in
+            switch result
             {
-                print(error as Any)
-            }
-            else if let response = response as? HTTPURLResponse, let data = data
-            {
-                if response.statusCode == 201
-                {
-                    completion(data)
-                }
+            case .success(let data): userInformation = data
+            case .failure(_): break
             }
         }
-        task.resume()
     }
     
     func showAreaButton()

@@ -29,7 +29,71 @@ class APICaller
         case success, fail
     }
     
-    func userLogin(url: String, headersTitle: String, headersContent: String, parameters: [String: String], completion: @escaping (Result<UserData, Error>)  -> Void)
+    func userRegister(url: String, headersTitle: String, headersContent: String, parameters: [String:String], completion: @escaping (Result<UserData, registerEmailError>) -> Void)
+    {
+        let headers: HTTPHeaders = [headersTitle: headersContent]
+        let completeUrl = "\(Constants.baseAPIURL)\(url)"
+        
+        AF.request(completeUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).response
+        { response in
+            let statusCode = response.response?.statusCode
+            let decoder = JSONDecoder()
+            
+            switch(response.result)
+            {
+                case.success:
+                    if let statusCode = statusCode
+                    {
+                        switch statusCode
+                        {
+                            case 200..<300:
+                                do
+                            {
+                                if let returnRegister = response.data
+                                {
+                                    let registerResult = try decoder.decode(UserData.self, from:        returnRegister)
+                                    completion(.success(registerResult))
+                                }
+                            }
+                            catch
+                            {
+                                completion(.failure(.emailAlreadyRegister("")))
+                            }
+                            case 422:
+                            do
+                            {
+                                if let returnRegisterError = response.data
+                                {
+                                    let registerError = try decoder.decode(CommonError.self, from: returnRegisterError)
+                                    if registerError.errors.email?[0] == "The email has already been taken."
+                                    {
+                                        completion(.failure(.emailAlreadyRegister("信箱已被註冊")))
+                                    }
+                                    else
+                                    {
+                                        completion(.failure(.emailInvaild("信箱格式錯誤")))
+                                    }
+                                }
+                                else
+                                {
+                    
+                                }
+                            }
+                            catch
+                            {
+                    
+                            }
+                                default:
+                                    break
+                            }
+                    }
+                case .failure:
+                    print("123")
+            }
+        }
+    }
+    
+    func userLogin(url: String, headersTitle: String, headersContent: String, parameters: [String: String], completion: @escaping (Result<UserData, Error>) -> Void)
     {
         let headers: HTTPHeaders = [headersTitle: headersContent]
         let completeUrl = "\(Constants.baseAPIURL)\(url)"
@@ -299,4 +363,10 @@ enum sendCommentError: Error
     case commentError(String)
 //    case missingParam(String)
 //    case responseFailure(code: Int, message: Data)
+}
+
+enum registerEmailError: Error
+{
+    case emailAlreadyRegister(String)
+    case emailInvaild(String)
 }
